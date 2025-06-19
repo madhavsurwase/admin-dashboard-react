@@ -3,6 +3,11 @@
 **DashFlow** is a modern, customizable, and responsive React-based admin dashboard designed for efficient project and data management. It integrates interactive components such as a Kanban board, dynamic charts, interactive tables, and a calendar — all styled with a sleek UI and powered by real-time data insights using natural language.
 
 ![Screenshot 2025-06-19 235406](https://github.com/user-attachments/assets/ef43a002-0cf1-4ed5-b4f9-78b0e8b92548)
+![Screenshot 2025-06-19 235448](https://github.com/user-attachments/assets/0495b5d4-cc0f-4b27-b99e-0ef285fa1015)
+![Screenshot 2025-06-19 235434](https://github.com/user-attachments/assets/bafcd291-73d1-4103-b43f-f072761afdfa)
+![Screenshot 2025-06-19 235511](https://github.com/user-attachments/assets/7b1273b6-d9f5-490e-8290-2f3d6ab4777b)
+
+
 
 
 ## 🌟 Features
@@ -35,20 +40,6 @@
 
 ---
 
-## 🧑‍🎨 Design & Style Guide
-
-- **Primary Color:** `#9D4EDD` (Vibrant Purple)
-- **Accent Color:** `#EE4266` (Lively Pink)
-- **Background Color:** `#F5EEF8` (Lavender)
-- **Fonts:**
-  - Body: `Inter`
-  - Headings: `Space Grotesk`
-- **Icons:** Minimal outline-style icons
-- **Layout:** Sidebar navigation, grid layout
-- **Animations:** Subtle transitions for theme, data loading, drag/drop
-
----
-
 ## 🛠️ Tech Stack
 
 - **Frontend:** React 18, Vite, Tailwind CSS
@@ -62,5 +53,18 @@
 
 ---
 
-## 📂 Project Structure
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js v18+
+- npm or yarn
+
+### Installation
+
+```bash
+git clone [https://github.com/madhavsurwase/admin-dashboard-react]
+cd DashFlow
+npm install
+npm run dev
+
 
