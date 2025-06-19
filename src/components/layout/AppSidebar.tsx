@@ -13,8 +13,9 @@ import {
   SidebarFooter,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+// Button and Separator are not used in the current version of the file from prompt
+// import { Button } from "@/components/ui/button";
+// import { Separator } from "@/components/ui/separator";
 import { Home, LayoutGrid, TableIcon, BarChartBig, CalendarDays, Settings, ShieldQuestion, Briefcase } from "lucide-react";
 import { cn } from "@/lib/utils";
 
