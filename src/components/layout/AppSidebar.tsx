@@ -13,19 +13,9 @@ import {
   SidebarFooter,
   useSidebar,
 } from "@/components/ui/sidebar";
-// Button and Separator are not used in the current version of the file from prompt
-// import { Button } from "@/components/ui/button";
-// import { Separator } from "@/components/ui/separator";
 import { Home, LayoutGrid, TableIcon, BarChartBig, CalendarDays, Settings, ShieldQuestion, Briefcase } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const navItems = [
-  { href: "/dashboard", label: "Dashboard", icon: Home },
-  { href: "/kanban", label: "Kanban Board", icon: LayoutGrid },
-  { href: "/tables", label: "Interactive Tables", icon: TableIcon },
-  { href: "/charts", label: "Dynamic Charts", icon: BarChartBig },
-  { href: "/calendar", label: "Calendar", icon: CalendarDays },
-];
+import { navItems as appNavItems } from "./navItems"; // Renamed to avoid conflict
 
 export function AppSidebar() {
   const pathname = usePathname();
@@ -47,7 +37,7 @@ export function AppSidebar() {
       </SidebarHeader>
       <SidebarContent className="flex-1 overflow-y-auto">
         <SidebarMenu>
-          {navItems.map((item) => (
+          {appNavItems.filter(item => item.href === '/dashboard' || item.href === '/kanban' || item.href === '/tables' || item.href === '/charts' || item.href === '/calendar').map((item) => (
             <SidebarMenuItem key={item.href}>
               <SidebarMenuButton
                 asChild
