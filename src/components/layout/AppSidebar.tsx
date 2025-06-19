@@ -72,9 +72,9 @@ export function AppSidebar() {
       <SidebarFooter className="mt-auto border-t p-2">
         <SidebarMenu>
             <SidebarMenuItem>
-                <SidebarMenuButton 
-                    asChild 
-                    isActive={pathname === "/settings"} 
+                <SidebarMenuButton
+                    asChild
+                    isActive={pathname === "/settings"}
                     tooltip="Settings"
                     onClick={() => setOpenMobile(false)}
                     className={cn(
@@ -91,9 +91,9 @@ export function AppSidebar() {
                 </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-                <SidebarMenuButton 
-                    asChild 
-                    isActive={pathname === "/help"} 
+                <SidebarMenuButton
+                    asChild
+                    isActive={pathname === "/help"}
                     tooltip="Help & Support"
                     onClick={() => setOpenMobile(false)}
                     className={cn(
