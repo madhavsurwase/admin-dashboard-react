@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -47,25 +48,23 @@ export function AppSidebar() {
         <SidebarMenu>
           {navItems.map((item) => (
             <SidebarMenuItem key={item.href}>
-              <Link href={item.href} legacyBehavior passHref>
-                <SidebarMenuButton
-                  asChild
-                  isActive={pathname === item.href || (item.href !== "/dashboard" && pathname.startsWith(item.href))}
-                  tooltip={item.label}
-                  onClick={() => setOpenMobile(false)}
-                  className={cn(
-                    "justify-start",
-                    (pathname === item.href || (item.href !== "/dashboard" && pathname.startsWith(item.href)))
-                      ? "bg-sidebar-primary text-sidebar-primary-foreground"
-                      : "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
-                  )}
-                >
-                  <a>
-                    <item.icon className="h-5 w-5" />
-                    <span className="group-data-[collapsible=icon]:hidden">{item.label}</span>
-                  </a>
-                </SidebarMenuButton>
-              </Link>
+              <SidebarMenuButton
+                asChild
+                isActive={pathname === item.href || (item.href !== "/dashboard" && pathname.startsWith(item.href))}
+                tooltip={item.label}
+                onClick={() => setOpenMobile(false)}
+                className={cn(
+                  "justify-start",
+                  (pathname === item.href || (item.href !== "/dashboard" && pathname.startsWith(item.href)))
+                    ? "bg-sidebar-primary text-sidebar-primary-foreground"
+                    : "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                )}
+              >
+                <Link href={item.href}>
+                  <item.icon className="h-5 w-5" />
+                  <span className="group-data-[collapsible=icon]:hidden">{item.label}</span>
+                </Link>
+              </SidebarMenuButton>
             </SidebarMenuItem>
           ))}
         </SidebarMenu>
@@ -73,46 +72,42 @@ export function AppSidebar() {
       <SidebarFooter className="mt-auto border-t p-2">
         <SidebarMenu>
             <SidebarMenuItem>
-                <Link href="/settings" legacyBehavior passHref>
-                    <SidebarMenuButton 
-                        asChild 
-                        isActive={pathname === "/settings"} 
-                        tooltip="Settings"
-                        onClick={() => setOpenMobile(false)}
-                        className={cn(
-                            "justify-start",
-                            pathname === "/settings"
-                            ? "bg-sidebar-primary text-sidebar-primary-foreground"
-                            : "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
-                        )}
-                    >
-                        <a>
-                            <Settings className="h-5 w-5" />
-                            <span className="group-data-[collapsible=icon]:hidden">Settings</span>
-                        </a>
-                    </SidebarMenuButton>
-                </Link>
+                <SidebarMenuButton 
+                    asChild 
+                    isActive={pathname === "/settings"} 
+                    tooltip="Settings"
+                    onClick={() => setOpenMobile(false)}
+                    className={cn(
+                        "justify-start",
+                        pathname === "/settings"
+                        ? "bg-sidebar-primary text-sidebar-primary-foreground"
+                        : "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                    )}
+                >
+                    <Link href="/settings">
+                        <Settings className="h-5 w-5" />
+                        <span className="group-data-[collapsible=icon]:hidden">Settings</span>
+                    </Link>
+                </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-                 <Link href="/help" legacyBehavior passHref>
-                    <SidebarMenuButton 
-                        asChild 
-                        isActive={pathname === "/help"} 
-                        tooltip="Help & Support"
-                        onClick={() => setOpenMobile(false)}
-                        className={cn(
-                            "justify-start",
-                            pathname === "/help"
-                            ? "bg-sidebar-primary text-sidebar-primary-foreground"
-                            : "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
-                        )}
-                    >
-                        <a>
-                            <ShieldQuestion className="h-5 w-5" />
-                            <span className="group-data-[collapsible=icon]:hidden">Help & Support</span>
-                        </a>
-                    </SidebarMenuButton>
-                </Link>
+                <SidebarMenuButton 
+                    asChild 
+                    isActive={pathname === "/help"} 
+                    tooltip="Help & Support"
+                    onClick={() => setOpenMobile(false)}
+                    className={cn(
+                        "justify-start",
+                        pathname === "/help"
+                        ? "bg-sidebar-primary text-sidebar-primary-foreground"
+                        : "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                    )}
+                >
+                     <Link href="/help">
+                        <ShieldQuestion className="h-5 w-5" />
+                        <span className="group-data-[collapsible=icon]:hidden">Help & Support</span>
+                    </Link>
+                </SidebarMenuButton>
             </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>
