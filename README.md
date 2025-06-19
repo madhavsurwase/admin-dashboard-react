@@ -1,4 +1,4 @@
-# 🚀 DashFlow — React Admin Dashboard
+# 🚀 DashFlow — Admin Dashboard
 
 **DashFlow** is a modern, customizable, and responsive React-based admin dashboard designed for efficient project and data management. It integrates interactive components such as a Kanban board, dynamic charts, interactive tables, and a calendar — all styled with a sleek UI and powered by real-time data insights using natural language.
 
